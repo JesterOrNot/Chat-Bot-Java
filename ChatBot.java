@@ -1,5 +1,5 @@
 /**
- * App
+ * Chat bot thing!
  */
 public class ChatBot {
 
