@@ -17,7 +17,10 @@ public class ChatBot {
         boolean notDone = true;
         while (notDone) {
             String userInput2 = input.nextLine();
-            if (userInput2.equals("nothing")) {
+            userInput2 = userInput2.toLowerCase();
+            if (userInput2.equals("programming")) {
+                System.out.println("I was programmed in java. I am done talking.");
+            } else if (userInput2.equals("nothing")) {
                 System.out.println("Ok, Bye!");
                 return;
             }
