@@ -18,7 +18,7 @@ public class ChatBot {
             } else if (userInput2.equals("bye")) {
                 System.out.println("Ok, Bye!");
                 return;
-            } else if (userInput2.length == 0) {
+            } else if (userInput2.length() == 0) {
                 System.out.println("I can't hear you!");
             } else {
                 System.out.println("Very interesting");
