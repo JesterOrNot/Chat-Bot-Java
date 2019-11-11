@@ -21,7 +21,13 @@ public class ChatBot {
             } else if (userInput2.length() == 0) {
                 System.out.println("I can't hear you!");
             } else {
-                System.out.println("Very interesting");
+                int randNum = (int)(Math.random()*5) + 1;
+                System.out.println(randNum);
+                if (randNum == 1 || randNum == 2 || randNum == 3) {
+                    System.out.println("Very interesting");
+                } else {
+                    System.out.println("Hmmm...");
+                }
             }
         }
     }
