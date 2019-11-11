@@ -33,17 +33,17 @@ class ChatBot {
             return "I can't hear you!";
         } else {
             int randNum = (int) (Math.random() * 5) + 1;
-            switch(randNum) {
-                case 1:
-                    return "Very interesting";
-                case 2:
-                    return "Cool!";
-                case 3:
-                    return "Ok!";
-                case 4:
-                    return "Got it!";
-                default:
-                    return "Hmmm...";
+            switch (randNum) {
+            case 1:
+                return "Very interesting";
+            case 2:
+                return "Cool!";
+            case 3:
+                return "Ok!";
+            case 4:
+                return "Got it!";
+            default:
+                return "Hmmm...";
             }
         }
     }
