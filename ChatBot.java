@@ -14,10 +14,13 @@ class ChatBot {
         // a loop that keeps reading in what the user types in
         // it then prints out a response from the chat bot
         while (keepRunning) {
-            System.out.print("input> ");
+            System.out.print("\u001B[36minput> \u001B[0m");
             String userSaid = sc.nextLine();
             String userSaid2 = userSaid.toLowerCase();
             String response = getResponse(userSaid2);
+            if (response.length() == 0) {
+                continue;
+            }
             System.out.println(response);
         }
     }
@@ -30,7 +33,7 @@ class ChatBot {
         } else if (userInput.equals("bye")) {
             return "Ok, Bye!";
         } else if (userInput.length() == 0) {
-            return "I can't hear you!";
+            return "";
         } else if (userInput.contains("no")) {
             return "Why are you so negative?!?";
         } else {
