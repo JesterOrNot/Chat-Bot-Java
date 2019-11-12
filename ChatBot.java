@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
 
 public class ChatBot {
     public static void main(String[] args) {
@@ -39,6 +41,14 @@ public class ChatBot {
             return "Why are you so negative?!?";
         } else if (userInput.startsWith("hi") || userInput.startsWith("hey") || userInput.startsWith("hello")) {
             return "Hi, hope you are having a good day!";
+        } else if (userInput.startsWith("i want ")) {
+            Pattern pattern = Pattern.compile("i want (.*)");
+            Matcher matcher = pattern.matcher(userInput);
+            String aString = new String();
+            while(matcher.find()) {
+                aString = aString.concat("Would it make you happy if you had " + matcher.group(1));
+            }
+            return aString;
         } else {
             int randNum = (int) (Math.random() * 5) + 1;
             switch (randNum) {
