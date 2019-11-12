@@ -18,8 +18,8 @@ public class ChatBot {
             String userSaid = sc.nextLine();
             String userSaid2 = userSaid.toLowerCase();
             String response = getResponse(userSaid2);
-            if (response.length() == 0) {
-                continue;
+            if (response.isEmpty()) {
+                System.out.print("I can't hear you!");;
             }
             System.out.println(response);
         }
@@ -33,10 +33,12 @@ public class ChatBot {
             return "I was programmed in Java. I am done talking.";
         } else if (userInput.equals("bye")) {
             return "Ok, Bye!";
-        } else if (userInput.length() == 0) {
+        } else if (userInput.isEmpty()) {
             return "";
         } else if (userInput.contains("no")) {
             return "Why are you so negative?!?";
+        } else if (userInput.startsWith("hi") || userInput.startsWith("hey") || userInput.startsWith("hello")) {
+            return "Hi, hope you are having a good day!";
         } else {
             int randNum = (int) (Math.random() * 5) + 1;
             switch (randNum) {
