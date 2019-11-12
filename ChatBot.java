@@ -19,7 +19,7 @@ public class ChatBot {
             String userSaid2 = userSaid.toLowerCase();
             String response = getResponse(userSaid2);
             if (response.isEmpty()) {
-                System.out.print("I can't hear you!");;
+                System.out.print("I can't hear you!");
             }
             System.out.println(response);
         }
