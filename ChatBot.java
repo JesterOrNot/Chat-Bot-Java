@@ -23,6 +23,7 @@ class ChatBot {
             }
             System.out.println(response);
         }
+        sc.close();
     }
 
     // method that determines what the chat bot says
