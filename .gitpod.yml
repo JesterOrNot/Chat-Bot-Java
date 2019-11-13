@@ -1,4 +1,4 @@
 image:
   file: .gitpod.Dockerfile
 tasks:
-  - init: javac ChatBot.java
+  - init: bash start.sh
