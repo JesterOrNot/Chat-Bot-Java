@@ -45,19 +45,28 @@ public class ChatBot {
             Pattern pattern = Pattern.compile("i want (.*)");
             Matcher matcher = pattern.matcher(userInput);
             String aString = new String();
-            while(matcher.find()) {
+            while (matcher.find()) {
                 aString = aString.concat("Would it make you happy if you had " + matcher.group(1));
             }
             return aString;
         } else {
-            int randNum = (int) (Math.random() * 5) + 1;
-            switch (randNum) {
-            case 1:     return "Very interesting";
-            case 2:     return "Cool!";
-            case 3:     return "Ok!";
-            case 4:     return "Got it!";
-            default:    return "Hmmm...";
-            }
-        }    
+            return randomResponse();
+        }
+    }
+
+    public static String randomResponse() {
+        int randNum = (int) (Math.random() * 5) + 1;
+        switch (randNum) {
+        case 1:
+            return "Very interesting";
+        case 2:
+            return "Cool!";
+        case 3:
+            return "Ok!";
+        case 4:
+            return "Got it!";
+        default:
+            return "Hmmm...";
+        }
     }
 }
