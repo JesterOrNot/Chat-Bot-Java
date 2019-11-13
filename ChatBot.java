@@ -57,8 +57,7 @@ public class ChatBot {
                 aString = aString.concat("Why do you " + matcher.group(1) + " me?");
             }
             return aString;
-        }
-        else {
+        } else {
             return randomResponse(); // Less efficent but ok
         }
     }
