@@ -49,7 +49,16 @@ public class ChatBot {
                 aString = aString.concat("Would it make you happy if you had " + matcher.group(1));
             }
             return aString;
-        } else {
+        } else if (userInput.startsWith("i") && userInput.endsWith("you")) {
+            Pattern pattern = Pattern.compile("i (.*) you");
+            Matcher matcher = pattern.matcher(userInput);
+            String aString = new String();
+            while (matcher.find()) {
+                aString = aString.concat("Why do you " + matcher.group(1) + " me?");
+            }
+            return aString;
+        }
+        else {
             return randomResponse(); // Less efficent but ok
         }
     }
