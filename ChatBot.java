@@ -50,7 +50,7 @@ public class ChatBot {
             }
             return aString;
         } else {
-            return randomResponse();
+            return randomResponse(); // Less efficent but ok
         }
     }
 
